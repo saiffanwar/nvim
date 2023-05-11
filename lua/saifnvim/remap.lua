@@ -1,6 +1,17 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+vim.keymap.set("v", "<leader>/", ":s/^/#/<cr>:noh<cr>")
+vim.keymap.set("v", "<leader>-/", ":s/^#//<cr>:noh<cr>")
+
+vim.keymap.set("i", "{", "{}<Esc>ha")
+vim.keymap.set("i", "{", "{}<Esc>ha")
+vim.keymap.set("i", "(", "()<Esc>ha")
+vim.keymap.set("i", "[", "[]<Esc>ha")
+vim.keymap.set("i", '"', '""<Esc>ha')
+vim.keymap.set("i", "'", "''<Esc>ha")
+vim.keymap.set("i", "<leader>%", "%  %<Esc>hi")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
