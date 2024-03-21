@@ -1,5 +1,6 @@
 require("saifnvim.set")
 require("saifnvim.remap")
+require("saifnvim.pluginconfigs")
 require("ibl").setup()
 
 local augroup = vim.api.nvim_create_augroup

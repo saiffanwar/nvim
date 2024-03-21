@@ -37,8 +37,9 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use("lukas-reineke/indent-blankline.nvim")
+use { "catppuccin/nvim", as = "catppuccin" }
+use("lukas-reineke/indent-blankline.nvim")
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -66,6 +67,13 @@ return require('packer').startup(function(use)
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+
+-- lualine
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
 
 end)
 
