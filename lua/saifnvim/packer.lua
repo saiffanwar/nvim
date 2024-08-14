@@ -37,7 +37,12 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
+
+-- Color Schemes
 use { "catppuccin/nvim", as = "catppuccin" }
+use { "tiagovla/tokyodark.nvim", as = "tokyodark" }
+use { "scottmckendry/cyberdream.nvim", as = "cyberdream"  }
+
 use("lukas-reineke/indent-blankline.nvim")
 
   use {

@@ -1,3 +1,3 @@
 require("saifnvim")
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyodark"
 
