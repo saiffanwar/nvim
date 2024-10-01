@@ -1,5 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
+
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
 
@@ -79,6 +80,15 @@ use {
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
+-- Auto Pairs
+use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+}
 
 end)
+
 
