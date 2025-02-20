@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
-  use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
 
 -- Color Schemes
@@ -69,7 +68,6 @@ use("lukas-reineke/indent-blankline.nvim")
 	  }
   }
 
-  use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
@@ -80,23 +78,23 @@ use {
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
--- Auto Pairs
-use {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-        require("nvim-autopairs").setup {}
-    end
-}
-
 -- Telescope File Manager
--- packer
 use {
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 }
 
+use {
+    "echasnovski/mini.nvim",
 
+}
+use {
+    'echasnovski/mini.surround',
+    version = false,  -- Use the latest version (omit this if using a specific version)
+    config = function()
+        require('mini.surround').setup()
+    end
+}
 end)
 
 
