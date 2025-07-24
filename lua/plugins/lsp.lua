@@ -124,8 +124,7 @@ return {
 						event.buf
 					)
 				then
-					local highlight_augroup =
-						vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
+					local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
 					vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 						buffer = event.buf,
 						group = highlight_augroup,
@@ -183,7 +182,7 @@ return {
 		local servers = {
 			-- clangd = {},
 			-- gopls = {},
-			-- pyright = {},
+			pyright = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -226,6 +225,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"pyright",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
